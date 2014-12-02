@@ -75,12 +75,6 @@ class WSUserService extends AuthServiceProvider {
                     $usuario->save();
                 }
 
-                $ip = \Request::getClientIp();
-                $acceso = new \App\Modelo\Acceso();
-                $acceso->ip = $ip;
-                $acceso->usuario_fk = $usuario->pk;
-                $acceso->save();
-
                 \Log::info("Usuario {$usuario->rut} autenticado exitosamente");
 
                 $resultado = true;
