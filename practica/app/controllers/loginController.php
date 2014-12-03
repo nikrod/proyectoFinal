@@ -13,8 +13,8 @@ class loginController extends BaseController {
 	public function post_index()
 	{
         	$userdata = array(
-            'id' => Input::get('username'),
-            'rut' => Input::get('username'),
+            'id' => Input::get('rut'),
+            'rut' => Input::get('rut'),
             'password' => Input::get('password')
         );
 
@@ -23,18 +23,37 @@ class loginController extends BaseController {
             'password' => 'Required'
         );
 
-        if (Auth::attempt($userdata)) {
-                // Redirect to homepage
-                return "hola";
-        }
-        else
-        {
-        	return "no hola";
-        	return View::make("Alumnos.add");
-        }
-        
+       
 
-	}
+
+
+        $validator = Validator::make($userdata, $rules);
+
+        if ($validator->passes()) {
+            unset($userdata['rut']);
+
+            // Try to log the user in.
+            if (Auth::attempt($userdata)) {
+                // Redirect to homepage
+                 return "hola";
+            } else {
+                // Redirect to the login page.
+                return "no hola";
+            }
+        }
+
+        // Something went wrong.
+        return Redirect::to('login')->with('login_errors', true)->withErrors($validator)->withInput(Input::except('password'));
+    }
+
+    public function getLogout() {
+        // Log out
+        Auth::logout();
+
+        // Redirect to homepage
+        return Redirect::to('login')->with('exito', 'Se ha deslogueado exitosamente');
+    }
+
 
 
 	public function showProfesor()
