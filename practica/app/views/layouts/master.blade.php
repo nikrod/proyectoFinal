@@ -45,7 +45,6 @@
 	<br>
 	<br>
 	<div class="container">
-	<footer>© Ingenieria de Software - 2014</footer>
     </div>
 </body>
 </html>

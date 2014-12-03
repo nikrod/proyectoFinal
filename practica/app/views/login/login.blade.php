@@ -16,36 +16,27 @@
 
         <h2 class="form-signin-heading" style="font-size:25px;">Inicio de sesión</h2>
 
-        {{ Form::open(array('url' => 'login')) }}
+        @if (Session::has('login_errors'))
+                    <b class="text-danger" >Rut o la contraseña no son correctos.</b>
+        @else
+                    <b>Introduzca Rut y contraseña para continuar.</b>
+        @endif
 
-@if (Session::has('login_errors'))
-<span class="error">Usuario o contraseña incorrectas.</span>
-@endif
-<p> {{ Form::label('rut', 'Rut') }} </p>
-<input class="form-control" placeholder="Rut" {{Form::text('rut') }} </p>
-
-<p>{{ Form::label('password', 'Contraseña') }}</p>
- <input class="form-control" placeholder="Contrase&#xF1;a" {{ Form::password('password') }}</p>
-
-
-<button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 10px;"><i class="fa fa-user fa-fw"></i>Iniciar sesión</button>
-
-
-{{ Form::close() }}
-
- 
+        <input name="rut" type="text" class="form-control" placeholder="rut" style="margin-top:10px;">
+        <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 10px;"><i class="fa fa-user fa-fw"></i>Iniciar sesión</button>
       </form>
-
     </div>
-
+    
+<?php echo HTML::script('js/jquery.Rut.min.js'); ?>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#rut").Rut();
+     });
+    </script>
     
 
-<?php echo HTML::script('js/jquery.Rut.min.js'); ?>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $("#rut").Rut();
-    });
-</script>
+
 
 
 

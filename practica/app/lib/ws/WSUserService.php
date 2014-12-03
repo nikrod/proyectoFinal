@@ -4,11 +4,7 @@ namespace WS\Domain\User\Service;
 
 use Illuminate\Auth\AuthServiceProvider;
 
-/**
- * Description of WSUserService
- *
- * @author Sebastián Salazar Molina <ssalazar@orangepeople.cl>
- */
+
 class WSUserService extends AuthServiceProvider {
 
     public function findUserByUserIdentifier($identificador) {
