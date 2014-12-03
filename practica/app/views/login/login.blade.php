@@ -22,19 +22,29 @@
                     <b>Introduzca Rut y contraseña para continuar.</b>
         @endif
 
-        <input name="rut" type="text" class="form-control" placeholder="rut" style="margin-top:10px;">
+        <input name="rut" type="text" class="form-control" placeholder="rut" id="rut" style="margin-top:10px;">
         <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
         <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 10px;"><i class="fa fa-user fa-fw"></i>Iniciar sesión</button>
       </form>
-    </div>
-    
-<?php echo HTML::script('js/jquery.Rut.min.js'); ?>
-    <script type="text/javascript">
+      <script src="http://localhost:8000/js/jquery.Rut.min.js"></script>
+      <script type="text/javascript">
       jQuery(document).ready(function($) {
         $("#rut").Rut();
-     });
-    </script>
+       });
+      </script>
     
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

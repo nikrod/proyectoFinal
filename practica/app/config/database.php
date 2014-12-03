@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'PROBANDO',
+			'database'  => 'BDDSW',
 			'username'  => 'root',
-			'password'  => 'damuse2141',
+			'password'  => 'asd123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -9,7 +9,13 @@
      UTEM
      @show
 	</title>
+
+  <?php echo HTML::script('js/jquery-1.11.1.min.js'); ?>
+  <?php echo HTML::script('js/jquery.Rut.min.js'); ?>
+  
+
 </head>
+
 <body style="background-color:#2E64FE;">
  
 
