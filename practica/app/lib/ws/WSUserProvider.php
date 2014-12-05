@@ -35,6 +35,8 @@ class WSUserProvider implements UserProviderInterface {
             return false;
         }
 
+        $rut = \App\RutUtils::rut($user->getAuthIdentifier());
+
         return new GenericUser(array(
             'id' => $user->getUserIdentifier(),
             'username' => $user->getUserName()
@@ -56,10 +58,12 @@ class WSUserProvider implements UserProviderInterface {
             return false;
         }
 
-	return new GenericUser(array(
+        return new GenericUser(array(
             'id' => $user->getUserIdentifier(),
             'username' => $user->getUserName()
         ));
+
+        return \App\Modelo\Usuario::whereRut($user->getAuthIdentifier())->first();
     }
 
     /**
