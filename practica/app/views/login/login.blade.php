@@ -2,11 +2,7 @@
 
 @section('titulo')
     UTEM - Iniciar Sesión
-<<<<<<< HEAD
 @stop 
-=======
-@stop   
->>>>>>> origin/master
 
 @section('content')
 
@@ -16,10 +12,6 @@
       <form class="form-signin" method="post" action="/" style="margin-top: 120px;">
 
         <h2 class="form-signin-heading" style="font-size:25px;">Inicio de sesión</h2>
-
-        <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top:10px;">
-        <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
-
 
         <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top:10px;">
         <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
