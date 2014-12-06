@@ -27,7 +27,7 @@
 @section('content')
 
 
-                        <div class="panel panel-default" style="margin-top: 20px;">
+                        <div class="panel panel-default" style="margin-top: 40px;">
                         <div class="panel-heading">
                             
                             <h2><b>Bienvenido Profesor  </b><i class="glyphicon glyphicon-folder-open" aria-hidden="true"> </i></h2> 
@@ -74,7 +74,7 @@
   <div class="form-group">
     <label>Agregar un Alumno</label>
     <br>
-    <a href="#"><button type="submit" class="btn btn-primary">Agregar <i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button></a>
+    <a href="Alumnos/add"><button type="submit" class="btn btn-primary">Agregar <i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button> </a>
   </div>
 
                     

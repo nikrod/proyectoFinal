@@ -8,37 +8,19 @@
 <center>
 <div id="container">
     <br>
-<label>hola alumno</label>
-<p>hola</p>
-
-    {{ Form::open(array('url' => 'Alumnos/add', 'method' => 'post')) }}
-  
-    <label2>Rut</label2>
-    {{Form::text('Rut_Alum')}}
-     <label3>Clave</label3>
-    {{Form::text('Clave')}}
-     <label4>Nombre</label4>
-    {{Form::text('Nombre')}}
-     <label4>Apellido</label4>
-    {{Form::text('Apellido')}}
-    <label4>Codigo carrera</label4>
-    {{Form::text('Carrera_Cod_Carrera')}}
-    {{Form::submit('aceptar')}}
-
-    
-    {{Form::close()}}
+    <br>
+    <br>
+<h2 class="form-signin-heading" style="font-size:25px;">Agregar Alumno</h2>
+    <form class="form-signin" method="post" action="add" style="margin-top: 120px;">
+    <input name="nombres" type="text" class="form-control" placeholder="Nombres" style="margin-top:10px;">
+    <input name="apellidos" type="text" class="form-control" placeholder="Apellidos" style="margin-top: 10px;">
+    <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top: 10px;">
+    <input name="carrera" type="text" class="form-control" placeholder="Carrera" style="margin-top: 10px;">
+    <br>
+    <button type="submit" class="btn btn-primary">Aceptar <i class="glyphicon glyphicon-plus-sign" aria-hidden="true"></i></button>
+    </form>
+       
+   
     </div>
 </center>
 @stop
-
-    
-
-
-
-
-
-
-
-
-
-

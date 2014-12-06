@@ -50,7 +50,7 @@ class loginController extends BaseController {
 
 		public function showAlumno()
 	{
-		return $this->layout->content = View::make('test.add');
+		return $this->layout->content = View::make('Alumnos.add');
 	}
 
 

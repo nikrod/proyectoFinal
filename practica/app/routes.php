@@ -17,9 +17,6 @@ Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
 Route::Controller('Administrador','administradorController');
 Route::Controller('Archivo','ArchivosController');
-Route::get('/administrador', 'loginController@showAdministrador');
-Route::get('/profesor', 'loginController@showProfesor');
-Route::get('/alumno', 'loginController@showAlumno');
 Route::controller("/login","loginController");
 Route::controller("/","loginController");
 Route::get('/',function()
