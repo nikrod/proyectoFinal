@@ -27,6 +27,7 @@ class loginController extends BaseController {
         if (Auth::attempt($userdata)) {
             $user = \App\Modelo\Usuario::whereRut($rut)->first();
                if($user->tipousuario()=='alumno')
+
                    return View::make("Alumnos.indexAlumno");
                else
                     return View::make("Profesor.indexProfe");
