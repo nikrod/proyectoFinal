@@ -17,10 +17,6 @@
         <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
 
 
-        <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top:10px;">
-        <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;">
-
-
         @if (Session::has('login_errors'))
                     <b class="text-danger" ><big>Usuario o contraseña incorrecto/a.</big></b>
         @endif
