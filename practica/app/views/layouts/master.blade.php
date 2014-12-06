@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	@include('include.styles')
+  <title>
+  @section('titulo')
+  Pautas y Tareas  
+  @show
+  </title>
+  @include('include.styles')
 
-	<title>
-     @section('titulo')
-     UTEM
-     @show
-	</title>
 
-  <?php echo HTML::script('js/jquery-1.11.1.min.js'); ?>
+  ?php echo HTML::script('js/jquery-1.11.1.min.js'); ?>
   <?php echo HTML::script('js/jquery.Rut.min.js'); ?>
+  
   
 
 </head>
+<body style='background-image: url("images/lghtmesh.png")'>
 
-<body style="background-color:#2E64FE;">
- 
+@section('sidebar')
 
+<div id="wrapper">
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation"  >
-      <div class="container">
+  <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -28,29 +29,30 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">Administrador de Pautas y Tareas</a>
+          <a class="navbar-brand" href="./">Administrador de Pautas y Tareas UTEM</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="./">Inicio</a></li>
 
-          </ul>
-        </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav>
-    <br>
-<br>
+  </div>
+  
+@show
 
 
-@section('content')
 
-   
-     @show
+ <div class="container">
+  
+  @yield('content')
+            <!-- /.row -->
+ </div>
 
 
-	<br>
-	<br>
-	<div class="container">
+@section('footer')
+
+<div class="container">
+  <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
     </div>
+ @show   
+
 </body>
 </html>

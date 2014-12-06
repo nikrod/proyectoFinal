@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('titulo')
-    UTEM - Profesor
+    UTEM - Alumno
 @stop   
 
 @section('content')

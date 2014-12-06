@@ -17,6 +17,7 @@ class loginController extends BaseController {
             'rut' => Input::get('rut'),
             'password' => Input::get('password')
         );
+            $rut = \App\RutUtils::rut($userdata['rut']);
 
         $rules = array(
             'rut' => 'Required',
@@ -24,13 +25,17 @@ class loginController extends BaseController {
         );
 
         if (Auth::attempt($userdata)) {
-                // Redirect to homepage
-                return "hola";
+            $user = \App\Modelo\Usuario::whereRut($rut)->first();
+               if($user->tipousuario()=='alumno')
+                   return View::make("Alumnos.indexAlumno");
+               else
+                    return View::make("Profesor.indexProfe");
         }
         else
         {
-        	return "no hola";
-        	return View::make("Alumnos.add");
+        	//return "no hola";
+        	//return View::make("Alumnos.add");
+            return Redirect::to('login')->with('login_errors', true);
         }
         
 
@@ -45,8 +50,10 @@ class loginController extends BaseController {
 
 		public function showAlumno()
 	{
-		return $this->layout->content = View::make('test.alumno');
+		return $this->layout->content = View::make('test.add');
 	}
+
+
 
 
 }

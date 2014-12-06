@@ -4,8 +4,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <meta name="keywords" content="WOW Slider, wowslider, wowslider.com" />
+    <meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Full screen slider" />
+    <link rel="stylesheet" type="text/css" href="WOW Slider/engine1/style.css" />
+    <script type="text/javascript" src="WOW Slider/engine1/jquery.js"></script>
    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/estilos.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -22,7 +27,21 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     
+
     <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.mim.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.11.1.mim.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="js/bootstrap-modal.js"></script>
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "97814332-1983-464d-998c-7ac57cc37bc0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -43,8 +62,17 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
+       <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script>
+    $(document).ready(function(){
+        $('.myCarousel').carousel()
+    });
+</script>

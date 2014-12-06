@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'pgsql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'BDDSW',
 			'username'  => 'root',
-			'password'  => 'asd123',
+			'password'  => 'damuse2141',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -66,9 +66,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'forge',
-			'username' => 'forge',
-			'password' => '',
+			'database' => 'bddsw2',
+			'username' => 'niko',
+			'password' => 'asd123',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
