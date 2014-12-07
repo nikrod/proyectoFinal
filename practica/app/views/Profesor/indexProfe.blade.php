@@ -57,27 +57,72 @@
 <div class="bs-docs-section">                
 <div class="panel panel-default">
 <div class="panel-body">
-  <div class="form-group">
-    <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
-    <input type="file" id="ejemplo_archivo_1">
-  </div>
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                           <label>Agregar un Archivo </label>
+                           <br>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Nuevo Archivo <i class="fa fa-plus-square"></i>
+                            </button>
 
-  <button type="submit" class="btn btn-primary">Aceptar <i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i></button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Nueva Evaluacion</h4>
+      </div>
+      <div class="modal-body">
+<!-- FORMULARIO -->
+<form role="form" action="articulos/create" enctype="multipart/form-data" method="post" id="formulario">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Titulo</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el titulo" name="titulo" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Descripción</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese la descripción" name="descripcion" required>
+  </div>
+    <!-- CAMPO OCULTO CREADOR-->
+          <input type="hidden" class="form-control" id="exampleInputEmail1" name="creador" >
+  <!-- -->
+  <!-- CAMPO OCULTO EDITOR-->
+          <input type="hidden" class="form-control" id="exampleInputEmail1" name="editor" >
+  <!-- -->
+ <div class="form-group">
+    <label for="exampleInputEmail1">Archivo <i class="fa fa-file-image-o"></i></label>
+    <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Ingrese un archivo" accept="image/gif, image/jpeg, image/png" name="foto1" required>
+ </div>
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar <i class="fa fa-times"></i></button>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios <i class="fa fa-floppy-o"></i>
+                            </button>
+</form>
+<!-- FIN FORMULARIO-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN DE Modal -->
 
                     
 </div>
 </div>
-</div>
-<div class="bs-docs-section">                
+</div> 
+<div class="panel-body">             
 <div class="panel panel-default">
-<div class="panel-body">
+<div class="panel-heading">
   <div class="form-group">
     <label>Agregar un Alumno</label>
     <br>
-     <a href="{{ URL::route('alumnos.create') }}"><button type="submit" class="btn btn-primary">Agregar <i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button> </a>
+     <a href="{{ URL::route('alumnos.create') }}"><button class="btn btn-primary">Agregar <i class="fa fa-plus-square"></i></button></a>
   </div>
 
-                    
+
 </div>
 </div>
 </div>

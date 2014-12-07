@@ -66,9 +66,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'bddsw2',
-			'username' => 'niko',
-			'password' => 'asd123',
+			'database' => 'BDDfinal',
+			'username' => 'damuse',
+			'password' => '2141',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
