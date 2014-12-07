@@ -1,0 +1,69 @@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatille" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="keywords" content="WOW Slider, wowslider, wowslider.com" />
+    <meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Full screen slider" />
+    {{ HTML::style('WOW Slider/engine1/style.css') }}
+    {{ HTML::style("WOW Slider/engine1/style.css") }}
+    {{ HTML::script("WOW Slider/engine1/jquery.js") }}
+   <!-- Bootstrap Core CSS -->
+    {{ HTML::style("css/bootstrap.min.css") }}
+    {{ HTML::style("css/estilos.css") }}
+
+    <!-- MetisMenu CSS -->
+    {{ HTML::style("css/plugins/metisMenu/metisMenu.min.css") }}
+
+    <!-- Custom CSS -->
+    {{ HTML::style("css/sb-admin-2.css") }}
+
+    <!-- Custom Fonts -->
+    {{ HTML::style("font-awesome-4.1.0/css/font-awesome.min.css") }}
+
+    {{ HTML::style("css/plugins/dataTables.bootstrap.css") }}
+
+    {{ HTML::script("js/bootstrap-modal.js") }}
+    {{ HTML::script("js/bootstrap.js") }}
+    {{ HTML::script("js/bootstrap.mim.js") }}
+    {{ HTML::script("js/jquery.js") }}
+    {{ HTML::script("js/jquery-1.11.1.min.js") }}
+    {{ HTML::script("js/modernizr-2.6.2.min.js") }}
+    {{ HTML::style("css/main.css") }}
+
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "97814332-1983-464d-998c-7ac57cc37bc0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Custom styles for this template -->
+    {{ HTML::style('signin.css') }}
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+       <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+    $(document).ready(function(){
+        $('.myCarousel').carousel()
+    });
+</script>
