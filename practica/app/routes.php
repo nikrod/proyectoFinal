@@ -11,18 +11,9 @@
 |
 */
 
+Route::resource('alumnos', 'AlumnosController');
 
-
-
-
-Route::get('/agregar',function()
-{
-    return View::make('Profesor.add');
-});
-
-
-
-Route::Controller('Alumnos','alumnosController');
+//Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
 Route::Controller('Administrador','administradorController');
 Route::Controller('Archivo','ArchivosController');
