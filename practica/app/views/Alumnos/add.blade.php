@@ -19,8 +19,15 @@
     <br>
     <button type="submit" class="btn btn-primary">Aceptar <i class="glyphicon glyphicon-plus-sign" aria-hidden="true"></i></button>
     </form>
-       
+    
+    <script src="http://localhost:8000/js/jquery.Rut.min.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+    $("#rut").Rut();
+    });
+    </script>  
    
+
     </div>
 </center>
 @stop

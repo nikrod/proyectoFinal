@@ -31,13 +31,21 @@ class AlumnosController extends \BaseController {
 	 */
 	public function store()
 	{
-		$Input=Input::All();
-                $Alumnox=new Alumno;
-                $Alumnox->nombres=$Input{"nombres"};
-                $Alumnox->apellidos=$Input{"apellidos"};
-                $Alumnox->rut=$Input{"rut"};
-                $Alumnox->carrera_fk="1";
-                $Alumnox->save();
+			$userdata = array(
+            'nombres' => Input::get('nombres'),
+            'apellidos' => Input::get('apelidos'),
+            'rut' => Input::get('rut'),
+            'carrera_fk'=>Input::get('1')
+        );
+            $rut = \App\RutUtils::rut($userdata['rut']);
+
+        $rules = array(
+            'rut' => 'Required',
+            'nombres' => 'Required',
+            'apellidos' => 'Required',
+            'carrera_fk' => 'Required'
+        );
+
                 return View::make('Profesor.indexProfe');
 	}
 
