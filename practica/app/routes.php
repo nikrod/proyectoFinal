@@ -11,20 +11,31 @@
 |
 */
 
+
+
+
+
+Route::get('/agregar',function()
+{
+    return View::make('Profesor.add');
+});
+
+
+
 Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
 Route::Controller('Administrador','administradorController');
 Route::Controller('Archivo','ArchivosController');
-Route::get('/administrador', 'loginController@showAdministrador');
-Route::get('/profesor', 'loginController@showProfesor');
-Route::get('/alumno', 'loginController@showAlumno');
-Route::group(array('after' => 'getUserInfo'), function()
-{
-    Route::controller("/login", "loginController");
-});
-//Route::controller("/login", array("loginController"));
-Route::controller("/","loginController");
+Route::Controller("/login","loginController");
+Route::Controller("/","loginController");
+
+
 Route::get('/',function()
 {
     return View::make('index');
+});
+
+Route::get('/Profesor/add',function()
+{
+    return View::make('Profesor.indexProfe');
 });

@@ -16,11 +16,10 @@ class alumnosController extends Controller {
 	{
 		$Input=Input::All();
 		$Alumnox=new Alumno;
-		$Alumnox->Rut_Alum=$Input{"Rut_Alum"};
-		$Alumnox->Clave=$Input{"Clave"};
-		$Alumnox->Nombre=$Input{"Nombre"};
-		$Alumnox->Apellido=$Input{"Apellido"};
-		$Alumnox->Carrera_Cod_Carrera=$Input{"Carrera_Cod_Carrera"};
+		$Alumnox->nombres=$Input{"nombres"};
+		$Alumnox->apellidos=$Input{"apellidos"};
+		$Alumnox->rut=$Input{"rut"};
+		$Alumnox->carrera_fk="1";
 		$Alumnox->save();
 	}
 

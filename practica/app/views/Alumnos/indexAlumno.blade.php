@@ -27,7 +27,7 @@
 
 @section('content')
 
-<div class="panel panel-default" style="margin-top: 20px;">
+<div class="panel panel-default" style="margin-top: 40px;">
                         <div class="panel-heading">
                             
                             <h2><b>Bienvenido Alumno </b><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i></h2> 

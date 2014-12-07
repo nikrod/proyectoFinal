@@ -4,23 +4,25 @@ class profesorController extends Controller {
 
 	public function getIndex()
 	{
-		return View::make('profesor');
+		return View::make('Profesor.indexProfe');
 	}
 	public function get_add()
 	{
-		return View::make('Profesor.add');
-	}
-	public function get_post()
-	{
 
+	}
+	public function post_add()
+	{
+		
 		$Input=Input::All();
-		$Prof=new Profesor;
-		$Prof->Rut_Prof=$Input{"Rut_Prof"};
-		$Prof->Clave=$Input{"Clave"};
-		$Prof->Nombre=$Input{"Nombre"};
-		$Prof->Apellido=$Input{"Apellido"};
-		$Prof->Departamento_Cod_Dpto=$Input{"Departamento_Cod_Dpto"};
-		$Prof->save();
+		$Alumnox=new Alumno;
+		$Alumnox->nombres=$Input{"nombres"};
+		$Alumnox->apellidos=$Input{"apellidos"};
+		$Alumnox->rut=$Input{"rut"};
+		$Alumnox->carrera_fk="1";
+		$Alumnox->save();
+		return View::make('Profesor.indexProfe');
+
+		
 	}
 
 }
