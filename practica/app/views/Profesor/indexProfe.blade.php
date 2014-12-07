@@ -74,7 +74,7 @@
   <div class="form-group">
     <label>Agregar un Alumno</label>
     <br>
-    <a href="Alumnos/add"><button type="submit" class="btn btn-primary">Agregar <i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button> </a>
+    <a href="/agregar"><button type="submit" class="btn btn-primary">Agregar <i class="glyphicon glyphicon-plus" aria-hidden="true"></i></button> </a>
   </div>
 
                     

@@ -13,13 +13,29 @@
 
 
 
+
+
+Route::get('/agregar',function()
+{
+    return View::make('Profesor.add');
+});
+
+
+
 Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
 Route::Controller('Administrador','administradorController');
 Route::Controller('Archivo','ArchivosController');
-Route::controller("/login","loginController");
-Route::controller("/","loginController");
+Route::Controller("/login","loginController");
+Route::Controller("/","loginController");
+
+
 Route::get('/',function()
 {
     return View::make('index');
+});
+
+Route::get('/Profesor/add',function()
+{
+    return View::make('Profesor.indexProfe');
 });

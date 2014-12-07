@@ -4,6 +4,6 @@
 class Alumno extends Eloquent{
 
 	protected $table = 'alumnos';
-	public $primaryKey = 'id';
+	public $primaryKey = 'pk';
 	
 }
