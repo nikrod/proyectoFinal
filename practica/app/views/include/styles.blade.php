@@ -6,38 +6,32 @@
 
     <meta name="keywords" content="WOW Slider, wowslider, wowslider.com" />
     <meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Full screen slider" />
-    <link rel="stylesheet" type="text/css" href="WOW Slider/engine1/style.css" />
-    <script type="text/javascript" src="WOW Slider/engine1/jquery.js"></script>
+    {{ HTML::style('WOW Slider/engine1/style.css') }}
+    {{ HTML::style("WOW Slider/engine1/style.css") }}
+    {{ HTML::script("WOW Slider/engine1/jquery.js") }}
    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="css/estilos.css" rel="stylesheet">
+    {{ HTML::style("css/bootstrap.min.css") }}
+    {{ HTML::style("css/estilos.css") }}
 
     <!-- MetisMenu CSS -->
-    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    {{ HTML::style("css/plugins/metisMenu/metisMenu.min.css") }}
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    {{ HTML::style("css/sb-admin-2.css") }}
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    {{ HTML::style("font-awesome-4.1.0/css/font-awesome.min.css") }}
 
-    <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="css/styles" rel="stylesheet">
+    {{ HTML::style("css/plugins/dataTables.bootstrap.css") }}
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    
+    {{ HTML::script("js/bootstrap-modal.js") }}
+    {{ HTML::script("js/bootstrap.js") }}
+    {{ HTML::script("js/bootstrap.mim.js") }}
+    {{ HTML::script("js/jquery.js") }}
+    {{ HTML::script("js/jquery-1.11.1.min.js") }}
+    {{ HTML::script("js/modernizr-2.6.2.min.js") }}
+    {{ HTML::style("css/main.css") }}
 
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.mim.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-1.11.1.mim.js"></script>
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-
-
-    <script src="js/bootstrap-modal.js"></script>
 
     <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -52,13 +46,10 @@
     <![endif]-->
 
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-
+    {{ HTML::style('signin.css') }}
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 

@@ -55,8 +55,8 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'BDDSW',
-			'username'  => 'root',
+			'database'  => 'softguare',
+			'username'  => '',
 			'password'  => 'damuse2141',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
@@ -66,9 +66,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'bddsw2',
-			'username' => 'niko',
-			'password' => 'asd123',
+			'database' => 'softguare',
+			'username' => 'softguare',
+			'password' => 'sofguare',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
