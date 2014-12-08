@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">Administrador de Pautas y Tareas UTEM</a>
+          <a class="navbar-brand" href="./">Administración de Evaluaciones UTEM</a>
         </div>
 
           <ul class="nav navbar-nav navbar-right">
@@ -26,15 +26,15 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-      <div class="container">
+      <div class="container" style="margin-top: 40px;">
         <br>
         <br>
     <div id="wowslider-container1">
     <div class="ws_images"><ul>
-                <li><img src="WOW Slider/data1/images/a.jpg" alt="img1" title="" id="wows1_0"/></li>
-                <li><a href="#" target="_blank"><img src="WOW Slider/data1/images/d.jpg" alt="img2" title="" id="wows1_1"/></a></li>
-                <li><a href="#"><img src="WOW Slider/data1/images/a.jpg" alt="full width slider" title="" id="wows1_2"/></a></li>
-                <li><img src="WOW Slider/data1/images/d.jpg" alt="img4" title="" id="wows1_3"/></li>
+                <li><a href="http://www.utem.cl/2014/12/informate-del-proceso-de-matricula/" target="_blank"><img src="WOW Slider/data1/images/2.jpg" alt="img1" title="" id="wows1_0"/></a></li>
+                <li><a href="http://www.utem.cl/futuros-estudiantes/oferta-academica/" target="_blank"><img src="WOW Slider/data1/images/1.jpg" alt="img2" title="" id="wows1_1"/></a></li>
+                <li><a href="http://direcap.blogutem.cl/curso-base-de-datos-espaciales/" target="_blank"><img src="WOW Slider/data1/images/3.jpg" alt="full width slider" title="" id="wows1_2"/></a></li>
+                <li><a href="https://udeverdad.cl/" target="_blank"><img src="WOW Slider/data1/images/4.jpg"  alt="img4" title="" id="wows1_3"/></a></li>
                 </ul></div>
                 <div class="ws_bullets"><div>
                 <a href="#" title="img1"></a>
@@ -54,7 +54,7 @@
 
 @section('footer')
 
-<div class="container">
+<div class="container" style="margin-top: 40px;">
   <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
     </div>
  @stop 

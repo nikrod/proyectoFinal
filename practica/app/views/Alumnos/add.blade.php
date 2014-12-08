@@ -16,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/login">Administrador de Pautas y Tareas</a>
+          <a class="navbar-brand" href="/login">Administración de Evaluaciones UTEM</a>
         </div>
 
       </div><!-- /.container -->
@@ -41,11 +41,17 @@
     <form class="form-signin" method="post" action="{{ URL::route('alumnos.store') }}">
     <input name="nombres" type="text" class="form-control" placeholder="Nombres" required>
     <input name="apellidos" type="text" class="form-control" placeholder="Apellidos" required>
-    <input name="rut" type="text" class="form-control" placeholder="Rut sin punto, ni guion, ni dígito verificador" id="rut" required>
+    <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" required>
     <input name="carrera" type="text" class="form-control" placeholder="Código de Carrera" required>
     <br>
     <button type="submit" class="btn btn-primary">Guardar Cambios <i class="fa fa-floppy-o"></i>
     </form>
+      <script src="http://localhost:8000/js/jquery.Rut.min.js"></script>
+      <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#rut").Rut();
+       });
+      </script>
       </div>
     </div>
     </div>
