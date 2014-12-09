@@ -2,14 +2,10 @@
 
 class AlumnosController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+
+	public function getIndex()
 	{
-		return View::make('indexAlumno');
+		return View::make('Alumnos.indexAlumno');
 	}
 
 
@@ -20,7 +16,7 @@ class AlumnosController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('Alumnos.add');
+		return $this->layout->content = View::make('Alumnos.add');
 	}
 
 
@@ -46,7 +42,7 @@ class AlumnosController extends \BaseController {
             'carrera_fk' => 'Required'
         );
 
-                return View::make('Profesor.indexProfe');
+                return $this->layout->content = View::make('Profesor.indexProfe');
 	}
 
 

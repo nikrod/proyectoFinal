@@ -15,7 +15,7 @@
   
 
 </head>
-<body style='background-image: url("images/lghtmesh.png")'>
+<body>
 
 @section('sidebar')
 

@@ -27,9 +27,9 @@ class loginController extends BaseController {
         if (Auth::attempt($userdata)) {
             $user = \App\Modelo\Usuario::whereRut($rut)->first();
                if($user->tipousuario()=='alumno')
-                   return View::make("Alumnos.indexAlumno");
+                   return $this->layout->content = View::make("Alumnos.indexAlumno");
                else
-                    return View::make("Profesor.indexProfe");
+                    return $this->layout->content = View::make("Profesor.indexProfe");
         }
         else
         {
@@ -39,18 +39,6 @@ class loginController extends BaseController {
         }
         
 
-	}
-
-
-	public function showProfesor()
-	{
-		return $this->layout->content = View::make('test.profesor');
-	}
-
-
-		public function showAlumno()
-	{
-		return $this->layout->content = View::make('Alumnos.add');
 	}
 
 

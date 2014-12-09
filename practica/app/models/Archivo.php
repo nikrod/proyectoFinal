@@ -2,7 +2,7 @@
 
 class Archivo extends Eloquent{
 
-	protected $guarded = [];
-	protected $table = 'Archivos';
+	protected $table = 'archivos';
+	public $primaryKey = 'pk';
 
 }

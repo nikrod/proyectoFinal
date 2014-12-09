@@ -12,9 +12,11 @@
 */
 
 Route::resource('alumnos', 'AlumnosController');
+Route::resource('archivos', 'ArchivosController');
 
 //Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
+Route::Controller('Asignaturas','AsignaturasController');
 Route::Controller('Administrador','administradorController');
 Route::Controller('Archivo','ArchivosController');
 Route::Controller("/login","loginController");

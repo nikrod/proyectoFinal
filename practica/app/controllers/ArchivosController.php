@@ -1,24 +1,35 @@
 <?php
 
-class ArchivosController extends Controller {
+class ArchivosController extends \BaseController {
 
-	protected function getIndex()
+	protected function Index()
 	{
-		return $this->layout->content = View::make('index');
+		
 	}
 	public function get_add()
 	{
-		return $this->layout->content = View::make('Archivo.add');
+		return View::make('Archivo.add');
 	}
 
-	public function get_post()
+	public function post_add($ramo)
 	{
-
+		
+		$path='uploads';
+		$file=Input::file('archivo');
 		$Input=Input::All();
-		$Archivo=new Archivo;
-		$Archivo->Nombre=$Input{"Url"};
-		$Archivo->Cod_Arch=$Input{"codigo"};
-		$Archivo->save();
+		$archivo=$file->getClientOriginalName();
+		$upload=$file->move($path,$archivo);
+
+		if($upload)
+		{
+		$archivox=new Archivo;
+		$archivox->nombre=$Input{'nombre'};
+		$archivox->ruta=('upload/'. $archivo);
+		$archivox->asignaturas_fk = $ramo;
+		$archivox->save();
+		}
+		return View::make('Profesor.indexProfe');
 	}
+	
 
 }
