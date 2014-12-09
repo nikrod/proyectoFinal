@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/asign-pato', function()
+{
+    $asignatura = Asignatura::find(1);
+    return View::make('test.asignatura-show')->with('asignatura', $asignatura);
+});
+
 Route::resource('alumnos', 'AlumnosController');
 Route::resource('archivos', 'ArchivosController');
 
