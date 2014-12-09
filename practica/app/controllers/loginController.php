@@ -41,6 +41,13 @@ class loginController extends BaseController {
 
 	}
 
+     public function getLogout() {
+        // Log out
+        Auth::logout();
+        // Redirect to homepage
+        return Redirect::to('login')->with('exito', 'Se ha deslogueado exitosamente');
+    }
+
 
 
 

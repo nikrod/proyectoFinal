@@ -2,9 +2,9 @@
 
 class ArchivosController extends \BaseController {
 
-	protected function Index()
+	protected function get_index()
 	{
-		
+		return View::make('Archivo.index');
 	}
 	public function get_add()
 	{

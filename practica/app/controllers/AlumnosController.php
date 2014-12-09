@@ -3,7 +3,7 @@
 class AlumnosController extends \BaseController {
 
 
-	public function getIndex()
+	public function Index()
 	{
 		return View::make('Alumnos.indexAlumno');
 	}
@@ -16,7 +16,7 @@ class AlumnosController extends \BaseController {
 	 */
 	public function create()
 	{
-		return $this->layout->content = View::make('Alumnos.add');
+		return View::make('Alumnos.add');
 	}
 
 
@@ -29,7 +29,7 @@ class AlumnosController extends \BaseController {
 	{
 			$userdata = array(
             'nombres' => Input::get('nombres'),
-            'apellidos' => Input::get('apelidos'),
+            'apellidos' => Input::get('apellidos'),
             'rut' => Input::get('rut'),
             'carrera_fk'=>Input::get('1')
         );
@@ -40,9 +40,17 @@ class AlumnosController extends \BaseController {
             'nombres' => 'Required',
             'apellidos' => 'Required',
             'carrera_fk' => 'Required'
-        );
+            );
 
-                return $this->layout->content = View::make('Profesor.indexProfe');
+      			$Input=Input::All();
+                $Alumnox=new Alumno;
+                $Alumnox->nombres=$Input{"nombres"};
+                $Alumnox->apellidos=$Input{"apellidos"};
+                $Alumnox->rut=$rut;
+                $Alumnox->carrera_fk="1";
+                $Alumnox->save();
+               
+                return View::make('Profesor.indexProfe');
 	}
 
 

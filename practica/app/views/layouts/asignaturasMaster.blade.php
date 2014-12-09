@@ -1,3 +1,4 @@
+@if(Auth::check())
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +26,28 @@
           <a class="navbar-brand" href="/Profesor">Administración de Evaluaciones UTEM</a>
         </div>
 
-        </div><!--/.nav-collapse -->
-      </div>
+                            <ul class="nav navbar-nav navbar-right">
+                            <?php 
+                            if(Auth::check()) {
+                                ?>                                
+                               <?php if (Request::is('logout')) { echo 'class="active"'; } ?><a href="/logout"><button type="button" class="btn btn-primary navbar-btn"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>Cerrar Sesión</button></a>
+                            <?php
+                            } else {
+                                ?>
+                                <li <?php if (Request::is('login')) { echo 'class="active"'; } ?>><a href="login">Login</a></li>
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                     
+                       
+                  
+        
+
+      </div><!-- /.container -->
     </nav>
   </div>
+
   
 @show
 <div id="wrapper">
@@ -68,11 +87,13 @@
 
 @section('footer')
 
-<div class="container" style="margin-top: 55px;">
+<div class="container">
   <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
     </div>
 
 
  @show
+
+    @endif
  </body>
 </html>

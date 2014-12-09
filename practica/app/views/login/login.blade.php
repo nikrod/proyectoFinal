@@ -39,7 +39,7 @@
 
 @section('footer')
 
-<div class="container" style="margin-top: 259px;">
+<div class="container" style="margin-top: 180px;">
   <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
     </div>
 @stop

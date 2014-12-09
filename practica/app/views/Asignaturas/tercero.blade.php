@@ -82,7 +82,7 @@
                             INF-642
                         </div>
                         <div class="panel-body">
-                      <a href='/Archivo/add?asig=30'><p><font size=1><center>LENGUAJES DE PROGRAMACIÓN</center></font></p>
+                      <a href='/Archivo/add?asig=30'><p><font size=1><center>LENGUAJES DE PROGRAMACIÓN</center></font></p></a>
                       
                      
                     
@@ -172,11 +172,3 @@
                     
 
 @stop
-@section('footer')
-
-<div class="container" style="margin-top: 55px;">
-  <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
-    </div>
-
-
- @stop

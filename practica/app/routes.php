@@ -11,8 +11,7 @@
 |
 */
 
-Route::resource('alumnos', 'AlumnosController');
-Route::resource('archivos', 'ArchivosController');
+Route::resource('Alumnos', 'AlumnosController');
 
 //Route::Controller('Alumnos','alumnosController');
 Route::Controller('Profesor','profesorController');
@@ -22,9 +21,8 @@ Route::Controller('Archivo','ArchivosController');
 Route::Controller("/login","loginController");
 Route::Controller("/","loginController");
 
-
 Route::get('/',function()
 {
     return View::make('index');
 });
-
+Route::get('logout', 'LoginController@getLogout');

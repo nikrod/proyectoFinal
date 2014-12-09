@@ -1,3 +1,4 @@
+@if(Auth::check())
 @extends('layouts.master')
 
 @section('titulo')
@@ -18,10 +19,28 @@
           </button>
           <a class="navbar-brand" href="/login">Administración de Evaluaciones UTEM</a>
         </div>
+ <ul class="nav navbar-nav navbar-right">
+                            <?php 
+                            if(Auth::check()) {
+                                ?>                                
+                               <?php if (Request::is('logout')) { echo 'class="active"'; } ?><a href="/logout"><button type="button" class="btn btn-primary navbar-btn"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>Cerrar Sesión</button></a>
+                            <?php
+                            } else {
+                                ?>
+                                <li <?php if (Request::is('login')) { echo 'class="active"'; } ?>><a href="login">Login</a></li>
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                     
+                       
+                  
+        
 
       </div><!-- /.container -->
     </nav>
   </div>
+
   
 @stop
 
@@ -38,7 +57,7 @@
 <h2 class="form-signin-heading" style="font-size:25px;">Agregar Alumno</h2>
 </div>
 <div class="panel-body">  
-    <form class="form-signin" method="post" action="{{ URL::route('alumnos.store') }}">
+    <form class="form-signin" method="post" action="{{ URL::route('Alumnos.store') }}">
     <input name="nombres" type="text" class="form-control" placeholder="Nombres" required>
     <input name="apellidos" type="text" class="form-control" placeholder="Apellidos" required>
     <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" required>
@@ -58,3 +77,4 @@
     </div>
 </center>
 @stop
+@endif

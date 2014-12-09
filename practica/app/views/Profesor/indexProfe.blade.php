@@ -1,3 +1,4 @@
+@if(Auth::check())
 @extends('layouts.asignaturasMaster')
 
 @section('titulo')
@@ -18,7 +19,7 @@
   <div class="form-group">
     <label>Agregar un Alumno</label>
     <br>
-     <a href="{{ URL::route('alumnos.create') }}"><button class="btn btn-primary">Agregar <i class="fa fa-plus-square"></i></button></a>
+     <a href="{{ URL::route('Alumnos.create') }}"><button class="btn btn-primary">Agregar <i class="fa fa-plus-square"></i></button></a>
   </div>
 
 
@@ -33,3 +34,4 @@
                     
 
 @stop
+@endif

@@ -129,11 +129,3 @@
                     
 
 @stop
-@section('footer')
-
-<div class="container" style="margin-top: 55px;">
-  <footer>© Administrador de Pautas y Tareas UTEM - 2014</footer>
-    </div>
-
-
- @stop
