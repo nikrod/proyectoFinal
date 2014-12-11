@@ -5,44 +5,7 @@
     UTEM - Alumno
 @stop   
 
-@section('sidebar')
 
-<div id="wrapper">
-<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation"  >
-  <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/login">Administración de Evaluaciones UTEM</a>
-        </div>
- <ul class="nav navbar-nav navbar-right">
-                            <?php 
-                            if(Auth::check()) {
-                                ?>                                
-                               <?php if (Request::is('logout')) { echo 'class="active"'; } ?><a href="/logout"><button type="button" class="btn btn-primary navbar-btn"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>Cerrar Sesión</button></a>
-                            <?php
-                            } else {
-                                ?>
-                                <li <?php if (Request::is('login')) { echo 'class="active"'; } ?>><a href="login">Login</a></li>
-                                <?php
-                            }
-                            ?>
-                        </ul>
-                     
-                       
-                  
-        
-
-      </div><!-- /.container -->
-    </nav>
-  </div>
-
-  
-@stop
 
 @section('content')
 <center>
@@ -61,9 +24,8 @@
     <input name="nombres" type="text" class="form-control" placeholder="Nombres" required>
     <input name="apellidos" type="text" class="form-control" placeholder="Apellidos" required>
     <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" required>
-    <input name="carrera" type="text" class="form-control" placeholder="Código de Carrera" required>
-    <br>
-    <button type="submit" class="btn btn-primary">Guardar Cambios <i class="fa fa-floppy-o"></i>
+   
+    <button type="submit" class="btn btn-primary">Subir Archivo <i class="glyphicon glyphicon-open" aria-hidden="true"></i>
     </form>
       <script src="http://localhost:8000/js/jquery.Rut.min.js"></script>
       <script type="text/javascript">

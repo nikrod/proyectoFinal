@@ -2,6 +2,8 @@
 
 class AsignaturasController extends \BaseController {
 
+	protected $layout='layouts.asignaturasMaster';
+
 	public function get_primero()
 	{
 		return View::make('Asignaturas.primero');

@@ -27,7 +27,7 @@ class loginController extends BaseController {
         if (Auth::attempt($userdata)) {
             $user = \App\Modelo\Usuario::whereRut($rut)->first();
                if($user->tipousuario()=='alumno')
-                   return $this->layout->content = View::make("Alumnos.indexAlumno");
+                   return $this->layout->content = View::make('Alumnos.indexAlumno');
                else
                     return $this->layout->content = View::make("Profesor.indexProfe");
         }
@@ -45,7 +45,7 @@ class loginController extends BaseController {
         // Log out
         Auth::logout();
         // Redirect to homepage
-        return Redirect::to('login')->with('exito', 'Se ha deslogueado exitosamente');
+        return Redirect::to('/')->with('exito', 'Se ha deslogueado exitosamente');
     }
 
 

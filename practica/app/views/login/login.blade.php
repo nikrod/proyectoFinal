@@ -4,6 +4,25 @@
     UTEM - Iniciar Sesión
 @stop 
 
+@section('sidebar')
+
+<div id="wrapper">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation"  >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">Administración de Evaluaciones UTEM</a>
+        </div>
+                  </div>
+             </div>
+
+@stop
+
 @section('content')
 
 <div id="wrapper">
@@ -16,7 +35,7 @@
 
 </div>
 <div class="panel-body">  
-        <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top:10px;" required>
+        <input name="rut" type="text" class="form-control" placeholder="Rut" id="rut" style="margin-top:10px;" required rut>
         <input name="password" type="password" class="form-control" placeholder="Contrase&#xF1;a" style="margin-top: 10px;" required>
         </br>
 

@@ -88,16 +88,3 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
-
-Route::filter('getUserInfo', function()
-{ // Filtro ejecutado luego del login
-    $rut = Auth::user()->id;
-    $user = \App\Modelo\Usuario::whereRut(\App\RutUtils::rut($rut))->first();
-    $client = new \Resty\Resty();
-    $client->setBaseURL('https://sepa.utem.cl/saap-rest/api');
-    $client->setCredentials('1-9', 'cdd76843b09fe09ab11876ab7986214e52e00791');
-    $req = $client->get("/fichaEstudiante/$rut");
-    $data = json_decode($req['body_raw'], true);
-    $user->nombre = $data['nombres'] . ' ' . $data['apellidos'];
-    $user->save();
-});

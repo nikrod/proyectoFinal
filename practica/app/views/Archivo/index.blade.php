@@ -1,3 +1,4 @@
+@if(Auth::check())
 @extends('layouts.master')
 
 @section('titulo')
@@ -58,7 +59,7 @@
 </div>
 <div class="panel-body">  
  <?php $_GET['asig']; ?> 
-  <form role="form" action="/Archivo/add/{{$_GET['asig']}}" enctype="multipart/form-data" method="post" id="formulario">
+  <form role="form" action="{{URL::to('/Archivo/add/'.$_GET['asig']}}" enctype="multipart/form-data" method="post" id="formulario">
   <div class="form-group">
     <label for="exampleInputEmail1">Descripcion</label>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese una descripción " name="nombre" required>
@@ -81,4 +82,4 @@
 
 @stop
 
-    
+@endif

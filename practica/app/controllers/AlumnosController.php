@@ -1,105 +1,72 @@
-<?php
+|<?php
 
 class AlumnosController extends \BaseController {
+
+	protected $layout='layouts.master';
 
 
 	public function Index()
 	{
+		
+		$usuario=Auth::User();
 		return View::make('Alumnos.indexAlumno');
 	}
 
+	public function get_asignaturas()
+	{
+		$nombre = Asignatura::all();
+		return View::make('Alumnos.asignaturas')->with('nombre',$nombre);
+	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
+	public function post_asignatura()
+	{
+
+	}
+	public function show()
+	{
+		$nombre = Asignatura::all();
+		return View::make('Alumnos.asignaturas')->with('nombre',$nombre);
+	}
 	public function create()
 	{
 		return View::make('Alumnos.add');
 	}
 
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 			$userdata = array(
             'nombres' => Input::get('nombres'),
             'apellidos' => Input::get('apellidos'),
             'rut' => Input::get('rut'),
-            'carrera_fk'=>Input::get('1')
+            
         );
             $rut = \App\RutUtils::rut($userdata['rut']);
 
         $rules = array(
             'rut' => 'Required',
-            'nombres' => 'Required',
-            'apellidos' => 'Required',
-            'carrera_fk' => 'Required'
+            'nombres' => 'Required|alpha',
+            'apellidos' => 'Required|alpha',
+            
             );
 
-      			$Input=Input::All();
+        $validator= Validator::make($userdata,$rules);
+
+        if ($validator->passes())
+            {
+      			
                 $Alumnox=new Alumno;
-                $Alumnox->nombres=$Input{"nombres"};
-                $Alumnox->apellidos=$Input{"apellidos"};
+                $Alumnox->nombres=$userdata["nombres"];
+                $Alumnox->apellidos=$userdata["apellidos"];
                 $Alumnox->rut=$rut;
-                $Alumnox->carrera_fk="1";
+                $Alumnox->carrera_fk=1;
                 $Alumnox->save();
                
-                return View::make('Profesor.indexProfe');
+                return Redirect::to('Profesor')->with('status', 'ok_create');
+            }
+
+            return Redirect::to('Profesor')->withErrors($validator);
 	}
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
 
 
 }

@@ -67,7 +67,14 @@ class WSUserService extends AuthServiceProvider {
                     \Log::warning("Usuario no encontrado -> se creará uno");
                     $usuario = new \App\Modelo\Usuario();
                     $usuario->rut = $rut;
-                    $usuario->nombre = "";
+                    $client = new \Resty\Resty();
+                    $client->setBaseURL('https://sepa.utem.cl/saap-rest/api');
+                    $client->setCredentials('1-9', 'cdd76843b09fe09ab11876ab7986214e52e00791');
+                    $rut = $rut . \App\RutUtils::dv($rut);
+                    $req = $client->get("/fichaEstudiante/$rut");
+                    $data = json_decode($req['body_raw'], true);
+                    $usuario->nombres = $data['nombres'];
+                    $usuario->apellidos = $data['apellidos'];
                     $usuario->save();
                 }
 

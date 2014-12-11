@@ -11,7 +11,7 @@ class Usuario extends \Eloquent {
 
 public function tipousuario() {
 	//$rut = '76063397';
-    $rut = (string) $this->rut . \App\RutUtils::dv($this->rut);
+        $rut = (string) $this->rut . \App\RutUtils::dv($this->rut);
        
         $service_url = "https://sepa.utem.cl/saap-rest/api/docente/$rut";
         $curl = curl_init($service_url);
@@ -34,38 +34,7 @@ public function tipousuario() {
             	return 'profe';
             else
             	return 'alumno';
-            return $curl_response;
 
-            $salida = json_decode($curl_response, true);
-            \Log::info("Salida: " . var_export($salida, true) . " '$curl_response'");
-
-            $respuesta = (bool) $salida['respuesta'];
-            $mensaje = (string) $salida['mensaje'];
-
-            if ($respuesta) {
-
-                // Guardo Acceso
-                $rut = \App\RutUtils::rut($username);
-                \Log::info("Rut: $username / $rut");
-                $usuario = \App\Modelo\Usuario::where('rut', '=', $rut)->first();
-                if ($usuario instanceof \App\Modelo\Usuario) {
-                    \Log::info("Usuario encontrado: {$usuario->rut}");
-                } else {
-                    \Log::warning("Usuario no encontrado -> se creará uno");
-                    $usuario = new \App\Modelo\Usuario();
-                    $usuario->rut = $rut;
-                    $usuario->nombre = "";
-                    $usuario->save();
-                }
-
-                \Log::info("Usuario {$usuario->rut} autenticado exitosamente");
-
-                $resultado = true;
-            } else {
-                \Log::error("Servicio REST respondió: '$mensaje'");
             }
         }
-        return (bool) $resultado;
-    }
-
 }

@@ -21,7 +21,7 @@
         </div>
 
           <ul class="nav navbar-nav navbar-right">
-            <a href="/login"><button type="button" class="btn btn-primary navbar-btn"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Ingresar al Portal</button></a>
+            <a href="{{URL::to ('/login')}}"><button type="button" class="btn btn-primary navbar-btn"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Ingresar al Portal</button></a>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
